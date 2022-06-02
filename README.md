@@ -12,4 +12,4 @@ Console application to simulate a basic ATM.
 
 Following the Standard Directory Layout - https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html | https://www.baeldung.com/maven-directory-structure
 
-Project Wiki - https://odhranmahony.notion.site/odhranmahony/ATMjava-Wiki-b95ad25bd9f54df898e267d53669e5d0
+Project Kanban Board - https://trello.com/b/Hl6CvFcW/atm-board
