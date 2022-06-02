@@ -62,7 +62,11 @@ public class Account {
             try {
                 System.out.print("What is your initial deposit? ");
                 deposit = Double.parseDouble(input.nextLine());
-                valid = true;
+                if (deposit < 0) {
+                    System.out.println("Please enter a value greater than 0");
+                } else {
+                    valid = true;
+                }
             } catch (NumberFormatException e) {
                 System.out.println("Please enter a number");
             }
