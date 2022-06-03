@@ -5,10 +5,10 @@ public class Account {
     User holder;
     double balance;
 
-    public Account(AccountType type, User holder) {
+    public Account(AccountType type, User holder, double balance) {
         this.type = type;
         this.holder = holder;
-        this.balance = 0;
+        this.balance = balance;
     }
 
     public AccountType getType() {

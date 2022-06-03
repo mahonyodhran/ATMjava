@@ -3,16 +3,16 @@ package main.java;
 import java.util.Scanner;
 public class Transaction {
 
-    public static double deposit(Scanner input) {
-        double deposit;
+    public static double makeTransaction(Scanner input, String attribute) {
+        double amount;
         boolean valid;
         valid = false;
-        deposit = 0;
+        amount = 0;
         while (!valid) {
             try {
-                System.out.print("How much would you like to deposit? ");
-                deposit = Double.parseDouble(input.nextLine());
-                if (deposit < 0) {
+                System.out.print("How much would you like to "+attribute + "? ");
+                amount = Double.parseDouble(input.nextLine());
+                if (amount < 0) {
                     System.out.println("Please enter a value greater than 0");
                 } else {
                     valid = true;
@@ -21,7 +21,7 @@ public class Transaction {
                 System.out.println("Please enter a number");
             }
         }
-        return deposit;
+        return amount;
     }
     
 }
