@@ -1,7 +1,5 @@
 package main.java;
 
-import java.util.ArrayList;
-
 public class User {
     private static User singleUser = null;
     int uuid;
@@ -11,9 +9,9 @@ public class User {
 
     private User() {
         uuid = 1;
-        firstName = "Odhran";
-        lastName = "O'Mahony";
-        email = "odhran@mail.com";
+        firstName = "John";
+        lastName = "Doe";
+        email = firstName + lastName + "@atm.com";
     }
 
     public static User getUser(){

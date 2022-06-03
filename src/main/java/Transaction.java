@@ -1,7 +1,6 @@
 package main.java;
 
 import java.util.Scanner;
-
 public class Transaction {
 
     public static double deposit(Scanner input) {
