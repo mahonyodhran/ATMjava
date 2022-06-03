@@ -1,30 +1,39 @@
 package main.java;
 
-import java.util.Scanner;
-
 public class User {
+    private static User singleUser = null;
+    int uuid;
+    String firstName;
+    String lastName;
+    String email;
 
-
-    static String createUserName(Scanner input) {
-        String name;
-        boolean valid;
-        valid = false;
-        name = "";
-        while(!valid){
-            try {
-                System.out.print("What is your name? ");
-                name = input.nextLine();
-                if (name.equals("")) {
-                    System.out.println("Please enter a value");
-                } else {
-                    valid = true;
-                }
-            } catch (NullPointerException e) {
-                System.out.println("Please enter a name");
-            }
-        }
-        return name;
+    private User() {
+        uuid = 1;
+        firstName = "Odhran";
+        lastName = "O'Mahony";
+        email = "odhran@mail.com";
     }
 
-    
+    public static User getUser(){
+        if (singleUser == null){
+            singleUser = new User();
+        }
+        return singleUser;
+    }
+
+    public int getUuid() {
+        return uuid;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 }

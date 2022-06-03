@@ -4,14 +4,15 @@ import java.util.Scanner;
 
 public class Transaction {
 
-    static double getInitialDeposit(Scanner input) {
+    
+    static double deposit(Scanner input) {
         double deposit;
         boolean valid;
         valid = false;
         deposit = 0;
         while (!valid) {
             try {
-                System.out.print("What is your initial deposit? ");
+                System.out.print("How much would you like to deposit? ");
                 deposit = Double.parseDouble(input.nextLine());
                 if (deposit < 0) {
                     System.out.println("Please enter a value greater than 0");
