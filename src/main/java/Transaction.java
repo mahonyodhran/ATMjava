@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Transaction {
 
-    
-    static double deposit(Scanner input) {
+    public static double deposit(Scanner input) {
         double deposit;
         boolean valid;
         valid = false;

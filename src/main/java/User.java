@@ -1,5 +1,7 @@
 package main.java;
 
+import java.util.ArrayList;
+
 public class User {
     private static User singleUser = null;
     int uuid;
@@ -36,4 +38,12 @@ public class User {
     public String getEmail() {
         return email;
     }
+
+    @Override
+    public String toString() {
+        return "User [email=" + email + ", firstName=" + firstName + ", lastName=" + lastName
+                + ", uuid=" + uuid + "]";
+    }
+
+    
 }
