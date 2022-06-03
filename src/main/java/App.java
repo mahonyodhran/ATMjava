@@ -9,8 +9,8 @@ public class App {
         double deposit;
 
         Scanner input = new Scanner(System.in);
-        name = Account.createUserName(input);
-        deposit = Account.getInitialDeposit(input);
+        name = AccountCreation.createUserName(input);
+        deposit = AccountCreation.getInitialDeposit(input);
         input.close();
 
         Account user = new Account(name, deposit);
