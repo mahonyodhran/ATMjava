@@ -11,12 +11,12 @@ public class App {
         User user = User.getUser();
         Account savings = new Account(AccountType.SAVINGS, user, 100.00);
         Account current = new Account(AccountType.CURRENT, user, 4000.00);
-        user.getAccounts().add(savings);
-        user.getAccounts().add(current);
-        System.out.println(user.getAccounts());
         Scanner input = new Scanner(System.in);
         int choice=0, depositAmount = 0, withdrawalAmount = 0;
         boolean finished = false;
+
+        user.getAccounts().add(savings);
+        user.getAccounts().add(current);
 
         atm.displayWelcomeMessage();
         while(!finished){
@@ -39,6 +39,7 @@ public class App {
                     break;
                 case 4:
                     input.close();
+                    System.out.print("Thanks for using the system. Goodbye. . .");
                     System.exit(0);
             }
         }
