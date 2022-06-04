@@ -3,7 +3,6 @@ import java.util.Scanner;
 import main.java.ATM;
 import main.java.Account;
 import main.java.AccountType;
-import main.java.Transaction;
 import main.java.User;
 
 public class App {
