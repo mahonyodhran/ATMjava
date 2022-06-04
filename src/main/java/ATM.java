@@ -15,11 +15,4 @@ public class ATM {
         System.out.println("3: Withdraw");
         System.out.println("4: Exit");
     }
-
-    public boolean isValidOption(int choice){
-        if(choice == 1 || choice == 2 || choice == 3 || choice == 4){
-            return true;
-        } 
-        return false;
-    }
 }
