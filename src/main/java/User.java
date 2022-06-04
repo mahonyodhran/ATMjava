@@ -1,17 +1,21 @@
 package main.java;
 
+import java.util.ArrayList;
+
 public class User {
     private static User singleUser = null;
     int uuid;
     String firstName;
     String lastName;
     String email;
+    ArrayList<Account> accounts;
 
     private User() {
         uuid = 1;
         firstName = "John";
         lastName = "Doe";
         email = firstName + lastName + "@atm.com";
+        accounts = new ArrayList<>();
     }
 
     public static User getUser(){
@@ -37,11 +41,14 @@ public class User {
         return email;
     }
 
+    public ArrayList<Account> getAccounts() {
+        return accounts;
+    }
+
     @Override
     public String toString() {
-        return "User [email=" + email + ", firstName=" + firstName + ", lastName=" + lastName
+        return "User [accounts=" + accounts + ", email=" + email + ", firstName=" + firstName + ", lastName=" + lastName
                 + ", uuid=" + uuid + "]";
     }
 
-    
 }

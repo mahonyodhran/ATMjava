@@ -10,6 +10,10 @@ public class App {
         ATM atm = new ATM();
         User user = User.getUser();
         Account savings = new Account(AccountType.SAVINGS, user, 100.00);
+        Account current = new Account(AccountType.CURRENT, user, 4000.00);
+        user.getAccounts().add(savings);
+        user.getAccounts().add(current);
+        System.out.println(user.getAccounts());
         Scanner input = new Scanner(System.in);
         int choice=0, depositAmount = 0, withdrawalAmount = 0;
         boolean finished = false;
