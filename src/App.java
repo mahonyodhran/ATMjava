@@ -21,8 +21,14 @@ public class App {
         atm.displayWelcomeMessage();
         while(!finished){
             atm.displayMenu();
-            System.out.print("What would you like to do: ");
-            choice = input.nextInt();
+            System.out.print("\nWhat would you like to do: ");
+
+            try {
+                choice = Integer.parseInt(input.nextLine());
+            } catch (NumberFormatException nfe) {
+                System.out.print("Try again\n");
+            }
+
             switch(choice){
                 case 1:
                     savings.checkBalance();
@@ -39,9 +45,9 @@ public class App {
                     break;
                 case 4:
                     input.close();
-                    System.out.print("Thanks for using the system. Goodbye. . .");
-                    System.exit(0);
+                    finished = true;
             }
         }
+        System.out.print("Thanks for using the system. Goodbye. . .");
     }
 }
